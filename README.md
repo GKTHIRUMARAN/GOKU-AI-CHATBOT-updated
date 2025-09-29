@@ -1,42 +1,38 @@
-# Goku Chatbot – Personalized Conversational AI
+## Goku Chatbot – Personalized Conversational AI
 
-A personalized AI chatbot designed to talk like Son Goku (Dragon Ball).
-This project uses Meta LLaMA 3 8B Instruct (via LM Studio) combined with Gradio for deployment.
-It supports persona prompting, memory persistence, and knowledge augmentation (RAG) for authentic, character-driven conversations.
+A **personalized AI chatbot designed to talk like Son Goku (Dragon Ball)**.  
+This **project uses Meta LLaMA 3 8B Instruct (via LM Studio) combined with Gradio for deployment**.  
+It **supports persona prompting, memory persistence, and knowledge augmentation** (RAG) for authentic, **character-driven conversations**.  
 
-#🚀 Features
-⚡ Goku Persona – Chatbot speaks and responds like Goku.
-🧠 Memory System – Stores past conversations in memory.txt for continuity.
-📚 Knowledge Injection – Uses knowledge.txt (Dragon Ball wiki excerpts) for lore accuracy.
-🎨 Gradio Interface – Clean, simple UI for local or public deployment.
-🔧 Modular Design – Easy to extend with new models, RAG pipelines, or character personas.
+## 🚀 Features  
+⚡ Goku Persona – Chatbot speaks and responds like Goku.  
+🧠 Memory System – Stores past conversations in memory.txt for continuity.  
+📚 Knowledge Injection – Uses knowledge.txt (Dragon Ball wiki excerpts) for lore accuracy.  
+🎨 Gradio Interface – Clean, simple UI for local or public deployment.  
+🔧 Modular Design – Easy to extend with new models, RAG pipelines, or character personas.  
 
-#🏗️ Project Structure
+#🏗️ Project Structure  
 GokuChatbot/
-│── app.py              # Main Gradio app
-│── prompt.txt          # Persona definition for Goku
-│── knowledge.txt       # Knowledge base (Dragon Ball wiki data)
-│── memory.txt          # Stores chat history
-│── requirements.txt    # Python dependencies
-│── README.md           # Project documentation
+│── app.py              # Main Gradio app  
+│── prompt.txt          # Persona definition for Goku  
+│── knowledge.txt       # Knowledge base (Dragon Ball wiki data)  
+│── memory.txt          # Stores chat history  
+│── requirements.txt    # Python dependencies  
+│── README.md           # Project documentation  
+|── embed_cache.pkl     # cache
 
-#🔑 Requirements
+## 🔑 Requirements  
+-Python 3.9+  
 
-Python 3.9+
+-LM Studio  
+ (running Meta LLaMA 3 8B Instruct)  
 
-LM Studio
- (running Meta LLaMA 3 8B Instruct)
+-Packages from requirements.txt:  
+ gradio  
+ requests  
+(add langchain, faiss, etc. if extending with RAG)  
 
-Packages from requirements.txt:
-
-gradio
-requests
-
-
-(add langchain, faiss, etc. if extending with RAG)
-
-#▶️ Run Locally
-
+##▶️ Run Locally
 Start LM Studio with Meta LLaMA 3 8B Instruct loaded.
 
 Make sure it is listening on http://localhost:1234/v1 (default).
