@@ -1,10 +1,10 @@
-## Goku Chatbot – Personalized Conversational AI
+# Goku Chatbot – Personalized Conversational AI
 
 A **personalized AI chatbot designed to talk like Son Goku (Dragon Ball)**.  
 This **project uses Meta LLaMA 3 8B Instruct (via LM Studio) combined with Gradio for deployment**.  
 It **supports persona prompting, memory persistence, and knowledge augmentation** (RAG) for authentic, **character-driven conversations**.  
 
-## 🚀 Features  
+# 🚀 Features  
 ⚡ Goku Persona – Chatbot speaks and responds like Goku.  
 🧠 Memory System – Stores past conversations in memory.txt for continuity.  
 📚 Knowledge Injection – Uses knowledge.txt (Dragon Ball wiki excerpts) for lore accuracy.  
@@ -12,70 +12,53 @@ It **supports persona prompting, memory persistence, and knowledge augmentation*
 🔧 Modular Design – Easy to extend with new models, RAG pipelines, or character personas.  
 
 #🏗️ Project Structure  
-GokuChatbot/
-│── app.py              # Main Gradio app  
-│── prompt.txt          # Persona definition for Goku  
-│── knowledge.txt       # Knowledge base (Dragon Ball wiki data)  
-│── memory.txt          # Stores chat history  
-│── requirements.txt    # Python dependencies  
-│── README.md           # Project documentation  
-|── embed_cache.pkl     # cache
+GokuChatbot/  
+│── app.py  
+│── prompt.txt  
+│── knowledge.txt  
+│── memory.txt  
+│── README.md  
+│── embed_cache.pkl  
 
-## 🔑 Requirements  
--Python 3.9+  
+# 🔑 Requirements  
+- Python 3.9+  
 
--LM Studio  
+- LM Studio  
  (running Meta LLaMA 3 8B Instruct)  
 
--Packages from requirements.txt:  
+- Packages from requirements.txt:  
  gradio  
  requests  
-(add langchain, faiss, etc. if extending with RAG)  
+ (add langchain, faiss, etc. if extending with RAG)  
 
-##▶️ Run Locally
-Start LM Studio with Meta LLaMA 3 8B Instruct loaded.
+# ▶️ Run Locally  
+- Start LM Studio with Meta LLaMA 3 8B Instruct loaded.  
+Make sure it is listening on http://localhost:1234/v1 (default).  
 
-Make sure it is listening on http://localhost:1234/v1 (default).
+Clone the repo:  
+git clone https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT-updated.git  
+cd GokuChatbot  
 
-Clone the repo:
+Install dependencies:  
+pip install -r requirements.txt  
 
-git clone https://github.com/your-username/GokuChatbot.git
-cd GokuChatbot
+Run the app:  
+python app.py  
 
+- Open your browser → http://localhost:7860  
 
-Install dependencies:
+# ⚙️ How It Works  
+- Persona Prompting – Reads prompt.txt to enforce Goku’s character style.  
+- Memory – Appends every user–bot exchange to memory.txt.  
+- Knowledge – Uses knowledge.txt for lore-accurate answers (RAG retrieval).  
+- Deployment – Served via Gradio (local + optional public link).  
 
-pip install -r requirements.txt
-
-
-Run the app:
-
-python app.py
-
-
-Open your browser → http://localhost:7860
-
-#⚙️ How It Works
-
-Persona Prompting – Reads prompt.txt to enforce Goku’s character style.
-
-Memory – Appends every user–bot exchange to memory.txt.
-
-Knowledge – Uses knowledge.txt for lore-accurate answers (future: RAG retrieval).
-
-Deployment – Served via Gradio (local + optional public link).
-
-#📌 Roadmap
-
- Improve RAG with FAISS/Chroma vector store for knowledge search.
-
- Add streaming responses for faster chat.
-
- Multi-character support (Vegeta, Piccolo, etc.).
-
- Dockerize for portable deployment.
-
- WebSocket API for integration into apps/games.
+# 📌 Roadmap  
+- Improve RAG with FAISS/Chroma vector store for knowledge search.  
+- Add streaming responses for faster chat.  
+- Multi-character support (Vegeta, Piccolo, etc.).  
+- Dockerize for portable deployment.  
+- WebSocket API for integration into apps/games.  
 
 #📜 License
 MIT License – free to use, modify, and distribute.
